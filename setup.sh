@@ -13,7 +13,9 @@ mv www /etc/nginx/sites-available
 rm /etc/nginx/sites-enabled/default
 ln -s /etc/nginx/sites-available/www /etc/nginx/sites-enabled/www
 svn export https://github.com/adalecki/dalecki_drugscreen/trunk/publication_database /usr/share/nginx/html/publication_database
-svn export https://github.com/adalecki/dalecki_drugscreen/trunk/sqlbuddy /usr/share/nginx/html/sqlbuddy
+wget https://github.com/adalecki/drugscreen/raw/master/sqlbuddy.tar.gz
+gunzip sqlbuddy.tar.gz
+tar -zxf sqlbuddy.tar -C /usr/share/nginx/html/
 echo "AllowUsers $U" >> /etc/ssh/sshd_config
 echo "		upstream php5-fpm-sock {
 			server unix:/var/run/php5-fpm.sock;
