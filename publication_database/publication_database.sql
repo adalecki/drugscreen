@@ -29,7 +29,7 @@ CREATE TABLE `Mycobacterium_tuberculosis_Copper_controls` (
   `type` varchar(10) DEFAULT NULL,
   `value` decimal(12,3) DEFAULT NULL,
   PRIMARY KEY (`cid`)
-) ENGINE=InnoDB AUTO_INCREMENT=161 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=161 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -63,7 +63,7 @@ CREATE TABLE `Mycobacterium_tuberculosis_Copper_plates` (
   `p_notes` text,
   `n_notes` text,
   PRIMARY KEY (`pid`)
-) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf81;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -93,7 +93,7 @@ CREATE TABLE `Mycobacterium_tuberculosis_Copper_samples` (
   `p_corrandnorm` decimal(12,3) DEFAULT NULL,
   `n_corrandnorm` decimal(12,3) DEFAULT NULL,
   PRIMARY KEY (`sid`)
-) ENGINE=InnoDB AUTO_INCREMENT=401 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=401 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
