@@ -1,3 +1,21 @@
 # drugscreen
 
-This is the README file without anything in it yet.
+These files are to set up a combinatorial drug screen program. They are meant to serve as a training set and example; users are expected to adapt both the files and virtual machine server to their own uses. No guarantee is made as to the security of the virtual machine set up using the included setup.sh file; it is for quick demonstration purposes only, and proper hardening must be added by the end user.
+
+To set up a virtual machine:
+1.) Download Oracle VM VirtualBox software (http://www.oracle.com/technetwork/server-storage/virtualbox/downloads/index.html#vbox) and install. Configure the networking to work with your local machine.
+2.) Download a Linux ISO image, such as Ubuntu 14.04 Server LTS (http://releases.ubuntu.com/14.04.4/ubuntu-14.04.4-server-amd64.iso). 
+3.) Within VirtualBox, create a new machine, selecting Linux 64-bit.
+4.) Select 1024mb RAM, a VDI image (default), 8gb HD size (default), and dynamically allocated file size (default).
+5.) Navigate to Settings, then Storage. Under "Controller: IDE" add the downloaded disk image to the virtual CD drive.
+6.1.) Navigate to Settings, then Network. Under Adapter 1, expand the Advanced options and select Port Forwarding.
+6.2.) Add a rule: Insert your local machine's IP address; an arbitrary number for host port (using anything other than 22 helps deflect attacks); 10.0.2.15 for guest IP; and 22 for guest port.
+6.3.) Add a rule: Insert your local machine's IP address; 80 for host port; 10.0.2.15 for guest IP; and 80 for guest port.
+7.) Start the virtual machine, installing Linux. Select all the default options. 
+8.) After restarting, log in, and execute the command "wget https://raw.githubusercontent.com/adalecki/drugscreen/master/setup.sh" (without quotes).
+9.1) After the setup file has downloaded, execute the command "sudo bash setup.sh" (without quotes).
+9.2) As the setup file executes, it will ask for a database password; this password will be used for accessing MariaDB as root.
+
+After setup completes, the program can be accessed from any web browser using the URL "[local_ip]/publication_database/index.php" replacing [local_ip] with the IP address of the host machine. 
+
+The included training database (publication_database.sql) contains 5 example plates with raw data entered into the database. The raw data files for those five plates, both substance + and substance -, are also included in  ~/drugscreen/plate_files/ as an example of the format the algorithm is set up to handle. For evaluation the files do not need to be entered, though the database can be purged (most easily using SQLBuddy) and the files re-uploaded to evaluate the upload process.
