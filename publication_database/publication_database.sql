@@ -63,7 +63,7 @@ CREATE TABLE `Mycobacterium_tuberculosis_Copper_plates` (
   `p_notes` text,
   `n_notes` text,
   PRIMARY KEY (`pid`)
-) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf81;
+) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
