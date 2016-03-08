@@ -8,11 +8,11 @@ apt-get -y upgrade
 echo mariadb-server mysql-server/root_password password $MARIADB_PW | sudo debconf-set-selections
 echo mariadb-server mysql-server/root_password_again password $MARIADB_PW | sudo debconf-set-selections
 apt-get -y install mariadb-server openssh-server python-software-properties openssh-server nginx php5-fpm php5-gd php-apc php5-mcrypt php5-cli php5-curl php5-mysql openbabel subversion
-wget https://raw.githubusercontent.com/adalecki/dalecki_drugscreen/master/www
+wget https://raw.githubusercontent.com/adalecki/drugscreen/master/www
 mv www /etc/nginx/sites-available
 rm /etc/nginx/sites-enabled/default
 ln -s /etc/nginx/sites-available/www /etc/nginx/sites-enabled/www
-svn export https://github.com/adalecki/dalecki_drugscreen/trunk/publication_database /usr/share/nginx/html/publication_database
+svn export https://github.com/adalecki/drugscreen/trunk/publication_database /usr/share/nginx/html/publication_database
 wget https://github.com/adalecki/drugscreen/raw/master/sqlbuddy.tar.gz
 gunzip sqlbuddy.tar.gz
 tar -zxf sqlbuddy.tar -C /usr/share/nginx/html/
