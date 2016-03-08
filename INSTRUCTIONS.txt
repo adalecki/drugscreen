@@ -3,8 +3,8 @@ These files are to set up a combinatorial drug screen program. They are meant to
 ***No guarantee is made as to the security of the virtual machine set up using the included setup.sh file; it is for quick demonstration purposes only, and proper hardening must be added by the end user.***
 
 Repository Contents:
-/publication_database/ : The main web files (HTML, CSS, Bootstrap, and PHP) used for displaying the server's front end.
 /plate_files/ : Contains the raw data files from five drug screening plates (10 total files); however, the data from these plates is already contained within the /publication_database/publication_database.sql database file.
+/publication_database/ : The main web files (HTML, CSS, Bootstrap, and PHP) used for displaying the server's front end.
 INSTRUCTIONS.txt : The instruction file on proper server setup.
 setup.sh : A bash file allowing automated setup of an Ubuntu/Nginx/PHP/MariaDB LAMP stack using an Ubuntu Server ISO.
 sqlbuddy.tar.gz : Archive containing files needed for the SQLBuddy application, which implements a GUI for database management.
