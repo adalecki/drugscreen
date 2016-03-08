@@ -1,6 +1,6 @@
-# drugscreen
+These files are to set up a combinatorial drug screen program. They are meant to serve as a training set and example; users are expected to adapt both the files and virtual machine server to their own uses. 
 
-These files are to set up a combinatorial drug screen program. They are meant to serve as a training set and example; users are expected to adapt both the files and virtual machine server to their own uses. No guarantee is made as to the security of the virtual machine set up using the included setup.sh file; it is for quick demonstration purposes only, and proper hardening must be added by the end user.
+***No guarantee is made as to the security of the virtual machine set up using the included setup.sh file; it is for quick demonstration purposes only, and proper hardening must be added by the end user.***
 
 To set up a virtual machine:
 1.) Download Oracle VM VirtualBox software (http://www.oracle.com/technetwork/server-storage/virtualbox/downloads/index.html#vbox) and install. Configure the networking to work with your local machine.
