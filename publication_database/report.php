@@ -74,7 +74,7 @@ foreach ($subarr as $sid => $substance)
         <div class="form-group">
           <label for="searchtype">Type of Search? </label><br>
             <div class="radio-inline"><input type="radio" name="searchtype" value="whole">Whole Library</label></div><br />
-            <div class="radio-inline"><input type="radio" name="searchtype" value="screened">Screened Library</label></div><br />
+            <div class="radio-inline"><input type="radio" name="searchtype" value="screened" checked>Screened Library</label></div><br />
             <div class="radio-inline"><input type="radio" name="searchtype" value="hits">Hits in Screen</label></div><br />
           <label for="motif">Structural Motif? </label>
             <input class="form-control" type="text" name="motif" id="motif" value="c12ccccc1cccc2">
